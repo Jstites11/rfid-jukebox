@@ -15,8 +15,8 @@ client_secret = ""
 redirect_uri = 'http://example.com/callback'
 
 
-#When you get your code after step 1, paste it here
-code = ""
+#When you get your code after step 1, paste it here and run authorization.py again
+code = "A"
 
 
 
@@ -47,8 +47,8 @@ if(code != ""):
     data['access_token'] = jsonData['access_token']
     data['refresh_token'] = jsonData['refresh_token']
     # print(data)
-    # with open('settings.json', 'w') as outfile:
-    #     json.dump(data, outfile)
+    with open('settings.json', 'w') as outfile:
+        json.dump(data, outfile)
     getAccessToken.getNew(data)
 
 
