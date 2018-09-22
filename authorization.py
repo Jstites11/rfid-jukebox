@@ -9,6 +9,7 @@ import getAccessToken
 
 # Put your client_id and client secret here
 client_id = ""
+
 client_secret = ""
 
 # You can use any URL you want but because I am not getting a callback to an actual website, I am just using this as a way to get the code
@@ -16,7 +17,7 @@ redirect_uri = 'http://example.com/callback'
 
 
 #When you get your code after step 1, paste it here and run authorization.py again
-code = "A"
+code = ""
 
 
 

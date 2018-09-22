@@ -10,7 +10,9 @@ def getPlayInfo(data):
     access_token = "Bearer " + data['access_token']
     headers = {"Authorization": access_token, "Accept": "application/json", "Content-Type": "application/json"}
     r = requests.get(url, headers=headers)
-    
+    # print(r.status_code)
+    if(r.status_code != 200):
+        return "There was an error controlling your music. Make sure you are running spotify on one of your devices!"
     playData =json.loads(r.text)
     song_name = playData['item']['name']
     all_artists = ""
