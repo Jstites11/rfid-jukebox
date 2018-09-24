@@ -35,7 +35,10 @@ if __name__ == "__main__":
                 
             elif(rfid[inputVal] == "back"):
                 print(spotifyRequests.prevSong(data))
-                
+            elif(rfid[inputVal] == "shuffle"):
+                print(spotifyRequests.toggleShuffle(data))
+            elif(rfid[inputVal] == "repeat"):
+                print(spotifyRequests.toggleRepeat(data))
             else:
                 print(spotifyRequests.playSong(data, rfid[inputVal]))
                 

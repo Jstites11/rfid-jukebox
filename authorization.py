@@ -12,11 +12,15 @@ client_id = ""
 
 client_secret = ""
 
+if(client_id == "" and client_secret == ""):
+    print("Make sure to add your client_id and client_secret. \n To get your client_id and client_secret, create a spotify app at https://developer.spotify.com/dashboard/")
+    raise SystemExit
+
 # You can use any URL you want but because I am not getting a callback to an actual website, I am just using this as a way to get the code
 redirect_uri = 'http://example.com/callback'
 
 
-#When you get your code after step 1, paste it here and run authorization.py again
+# When you get your code after step 1, paste it here and run authorization.py again the code should be in your URL bar after ?code=.....
 code = ""
 
 
